@@ -51,7 +51,7 @@ static const struct luaL_Reg ltask_functions[] = {
   { NULL,  NULL          }
 };
  
-int luaopen_ltask(lua_State *L)
+int luaopen_task(lua_State *L)
 {
   luaL_newlib(L, ltask_functions);
   return 1;

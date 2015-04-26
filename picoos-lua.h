@@ -40,8 +40,8 @@ extern "C"
 
 LUALIB_API void pluaAddLibs(lua_State *L);
 
-int luaopen_lpico(lua_State *L);
-int luaopen_ltask(lua_State *L);
+int luaopen_pos(lua_State *L);
+int luaopen_task(lua_State *L);
 
 void luaMain(int, char**);
 

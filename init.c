@@ -38,7 +38,6 @@
 #include "lualib.h"
 #include "lauxlib.h"
 
-
 static const luaL_Reg libs[] = {
 
 /*
@@ -57,7 +56,7 @@ static const luaL_Reg libs[] = {
 /*
  * Pico]OS pico layer module.
  */
-  { PLUA_POSNAME, luaopen_lpico },
+  { PLUA_POSNAME, luaopen_pos },
   { NULL, NULL }
 };
 
