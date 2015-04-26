@@ -45,7 +45,9 @@ static const luaL_Reg loadedlibs[] = {
   {LUA_COLIBNAME, luaopen_coroutine},
   {LUA_TABLIBNAME, luaopen_table},
   {LUA_IOLIBNAME, luaopen_io},
+#ifndef _POSPACK
   {LUA_OSLIBNAME, luaopen_os},
+#endif
   {LUA_STRLIBNAME, luaopen_string},
   {LUA_MATHLIBNAME, luaopen_math},
   {LUA_UTF8LIBNAME, luaopen_utf8},
