@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <picoos.h>
 
 /* This file uses only the official API of Lua.
 ** Any function declared here could be written as an application function.
@@ -936,12 +937,17 @@ LUALIB_API const char *luaL_gsub (lua_State *L, const char *s, const char *p,
 
 static void *l_alloc (void *ud, void *ptr, size_t osize, size_t nsize) {
   (void)ud; (void)osize;  /* not used */
+  void* ret;
+
+  posTaskSchedLock();
   if (nsize == 0) {
     free(ptr);
-    return NULL;
+    ret = NULL;;
   }
   else
-    return realloc(ptr, nsize);
+    ret = realloc(ptr, nsize);
+  posTaskSchedUnlock();
+  return ret;
 }
 
 
