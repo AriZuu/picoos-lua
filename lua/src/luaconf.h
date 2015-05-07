@@ -12,6 +12,8 @@
 #include <stddef.h>
 
 
+#define LUA_USER_H "luauser.h"
+
 /*
 ** ===================================================================
 ** Search for "@@" to find all configurable definitions.

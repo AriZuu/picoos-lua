@@ -42,6 +42,7 @@ TARGET = picoos-lua
 SRC_TXT =	task.c			\
 		init.c			\
 		pico.c			\
+		lock.c			\
 		lua/src/lapi.c		\
 		lua/src/lauxlib.c	\
 		lua/src/lbaselib.c	\
