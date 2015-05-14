@@ -70,7 +70,6 @@ SRC_TXT =	task.c			\
 		lua/src/ltable.c	\
 		lua/src/ltablib.c	\
 		lua/src/ltm.c		\
-		lua/src/lua.c		\
 		lua/src/lundump.c	\
 		lua/src/lutf8lib.c	\
 		lua/src/lvm.c		\

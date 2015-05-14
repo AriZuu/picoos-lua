@@ -31,12 +31,12 @@
 /*
  * Use posMutexes for lua locking.
  */
-#define lua_lock(L) luaLock(L)
-#define lua_unlock(L) luaUnlock(L)
-#define luai_userstateopen(L) luaLockInitial(L)
-#define luai_userstatethread(L,L1) luaLockInitial(L1)
+#define lua_lock(L) pua_lock(L)
+#define lua_unlock(L) pua_unlock(L)
+#define luai_userstateopen(L) pua_lockInitial(L)
+#define luai_userstatethread(L,L1) pua_lockInitial(L1)
 
-void luaLockInitial(lua_State * L);
-void luaLockFinal(lua_State * L);
-void luaLock(lua_State * L);
-void luaUnlock(lua_State * L);
+void pua_lockInitial(lua_State * L);
+void pua_lockFinal(lua_State * L);
+void pua_lock(lua_State * L);
+void pua_unlock(lua_State * L);

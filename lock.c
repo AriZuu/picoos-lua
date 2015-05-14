@@ -34,7 +34,7 @@
 
 static POSMUTEX_t mutex = NULL;
 
-void luaLockInitial(lua_State * L) 
+void pua_lockInitial(lua_State * L) 
 { 
   if (mutex == NULL) {
 
@@ -42,7 +42,7 @@ void luaLockInitial(lua_State * L)
   }
 }
 
-void luaLockFinal(lua_State * L)
+void pua_lockFinal(lua_State * L)
 { 
   if (mutex) {
 
@@ -51,12 +51,12 @@ void luaLockFinal(lua_State * L)
   }
 }
 
-void luaLock(lua_State * L)
+void pua_lock(lua_State * L)
 {
   posMutexLock(mutex);
 }
 
-void luaUnlock(lua_State * L)
+void pua_unlock(lua_State * L)
 { 
   posMutexUnlock(mutex);
 }

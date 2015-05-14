@@ -56,7 +56,7 @@ static const luaL_Reg libs[] = {
 /*
  * Pico]OS pico layer module.
  */
-  { PLUA_POSNAME, luaopen_pos },
+  { PUA_POSNAME, luaopen_pua_pos },
   { NULL, NULL }
 };
 
@@ -73,9 +73,9 @@ LUALIB_API void luaL_openlibs (lua_State *L)
     lua_pop(L, 1);
   }
 
-  pluaAddLibs(L);
+  pua_addlibs(L);
 }
 
-LUALIB_API void __attribute__((weak)) pluaAddLibs(lua_State *L)
+LUALIB_API void __attribute__((weak)) pua_addlibs(lua_State *L)
 {
 }

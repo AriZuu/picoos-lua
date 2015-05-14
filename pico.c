@@ -40,7 +40,7 @@ static const luaL_Reg libs[] = {
 /*
  * Pico]OS API modules.
  */
-  { PLUA_TASKNAME, luaopen_task },
+  { PUA_TASKNAME, luaopen_pua_task },
   { NULL, NULL }
 };
 
@@ -53,7 +53,7 @@ static int lMS(lua_State *L)
   return 1;
 }
  
-int luaopen_pos(lua_State *L)
+int luaopen_pua_pos(lua_State *L)
 {
   lua_pushcfunction(L, lMS);
   lua_setglobal(L, "MS");
