@@ -121,7 +121,6 @@ static void taskMain(void* arg)
 static int ltask_create(lua_State *L)
 {
   LPOSTASK_t* task;
-  int taskRef;
 
   if (lua_gettop(L) != 3)
     return luaL_error(L, "expecting exactly 3 arguments");

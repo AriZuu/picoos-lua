@@ -63,7 +63,7 @@ static const luaL_Reg libs[] = {
 /*
  * Initialize libraries.
  */
-LUALIB_API void luaL_openlibs (lua_State *L)
+void luaL_openlibs (lua_State *L)
 {
   const luaL_Reg *lib;
 
@@ -76,6 +76,6 @@ LUALIB_API void luaL_openlibs (lua_State *L)
   pua_addlibs(L);
 }
 
-LUALIB_API void __attribute__((weak)) pua_addlibs(lua_State *L)
+void __attribute__((weak)) pua_addlibs(lua_State *L)
 {
 }

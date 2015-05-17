@@ -38,7 +38,7 @@ extern "C"
 #define PUA_POSNAME       "pos"
 #define PUA_TASKNAME      "task"
 
-LUALIB_API void pua_addlibs(lua_State *L);
+void pua_addlibs(lua_State *L);
 
 int luaopen_pua_pos(lua_State *L);
 int luaopen_pua_task(lua_State *L);
