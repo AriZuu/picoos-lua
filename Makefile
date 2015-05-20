@@ -34,7 +34,7 @@
 RELROOT = ../picoos/
 PORT ?= cortex-m
 BUILD ?= RELEASE
-EXTRA_CFLAGS += -Wno-cast-align
+EXTRA_CFLAGS += -Wno-cast-align -Wno-bad-function-cast
 
 include $(RELROOT)make/common.mak
 
