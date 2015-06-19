@@ -4,7 +4,7 @@ for writing hard-realtime parts in application. But it could
 be very useful in secondary tasks, like communication to
 some external systems or user interfaces.
 
-This is currently full LUA 5.3.0, except posix os module (pipes etc),
+This is currently full LUA 5.3.1, except posix os module (pipes etc),
 which is not suitable for Pico]OS.
 
 There is now simple support for RTOS threads:
